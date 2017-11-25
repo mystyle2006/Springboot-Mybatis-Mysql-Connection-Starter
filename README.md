@@ -125,3 +125,16 @@ We need to include those dependenceis below for our project
 
 </project>
 ~~~
+
+## Set up application.properties for the database connection source
+To use mysql, we need to set up properties at application.properties
+
+~~~
+##Server
+server.port = 8181 //Eclipse uses 8080 internally by default
+##Database
+spring.datasource.driver-class-name= com.mysql.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/springboot?useSSL=false
+spring.datasource.username=inho
+spring.datasource.password=1209123
+~~~
