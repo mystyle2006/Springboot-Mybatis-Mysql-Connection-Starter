@@ -138,3 +138,8 @@ spring.datasource.url=jdbc:mysql://localhost:3306/springboot?useSSL=false
 spring.datasource.username=inho
 spring.datasource.password=1209123
 ~~~
+
+## Create a database
+First, you need to install [Mysql](https://dev.mysql.com/downloads/installer/) and create the table like below.
+
+![Alt text](https://user-images.githubusercontent.com/18185890/33230021-563aa662-d21e-11e7-954b-befce0632dc9.PNG)
