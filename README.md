@@ -253,3 +253,18 @@ public interface BoardMapper {
 	
 }
 ~~~
+
+## Create Mapper for our board
+In **src/main/resources**, create the folder named **mappers** and **boardMapper.xml** in it.
+
+~~~
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.restful.mapper.BoardMapper">
+	<select id="boardSelect" resultType="com.restful.domain.BoardVO">
+		select * from board
+	</select>
+</mapper>
+~~~
+
+# Summary
