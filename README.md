@@ -25,7 +25,7 @@ If it is installed,
 * Create Mapper interface for our board
 * Create Mapper for our board
 
-## Set up pom.xml with dependencies for our project like mybatis, mysql
+## Step01 Set up pom.xml with dependencies for our project like mybatis, mysql
 We need to include those dependenceis below for our project
 * ***spring-boot-starter-actuator*** to manage our application
 * ***spring-boot-starter-web*** to set up a basic springboot
@@ -126,7 +126,7 @@ We need to include those dependenceis below for our project
 </project>
 ~~~
 
-## Set up application.properties for the database connection source
+## Step02 Set up application.properties for the database connection source
 To use mysql, we need to set up properties at application.properties
 
 ~~~
@@ -139,12 +139,12 @@ spring.datasource.username=inho
 spring.datasource.password=1209123
 ~~~
 
-## Create a database
+## Step03 Create a database
 First, you need to install [Mysql](https://dev.mysql.com/downloads/installer/) and create the table like below.
 
 ![Alt text](https://user-images.githubusercontent.com/18185890/33230021-563aa662-d21e-11e7-954b-befce0632dc9.PNG)
 
-## Create SqlSessionFactory bean for the connection
+## Step04 Create SqlSessionFactory bean for the connection
 Go to **src/main/java** and put the below code into our **BoardServicesApplication.java**
 
 ~~~
@@ -162,7 +162,7 @@ public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Excepti
 }
 ~~~
 
-## Create VO(Value Object) for our board
+## Step05 Create VO(Value Object) for our board
 In **sec/main/java**, create the package like **com.restful.domain** and put the below code into it.
 ~~~
 package com.restful.domain;
@@ -237,7 +237,7 @@ public class BoardVO {
 }
 ~~~
 
-## Create Mapper interface for our board
+## Step06 Create Mapper interface for our board
 In **src/main/java**, create the package like **com.restful.mapper** and put the code into it
 
 ~~~
@@ -254,7 +254,7 @@ public interface BoardMapper {
 }
 ~~~
 
-## Create Mapper for our board
+## Step07 Create Mapper for our board
 In **src/main/resources**, create the folder named **mappers** and **boardMapper.xml** in it.
 
 ~~~
