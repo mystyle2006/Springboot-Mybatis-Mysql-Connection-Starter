@@ -236,3 +236,20 @@ public class BoardVO {
 	}
 }
 ~~~
+
+## Create Mapper interface for our board
+In **src/main/java**, create the package like **com.restful.mapper** and put the code into it
+
+~~~
+package com.restful.mapper;
+
+import java.util.ArrayList;
+
+import com.restful.domain.BoardVO;
+
+public interface BoardMapper {
+
+	public ArrayList<BoardVO> boardSelect() throws Exception;
+	
+}
+~~~
