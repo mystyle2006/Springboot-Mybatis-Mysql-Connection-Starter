@@ -266,5 +266,3 @@ In **src/main/resources**, create the folder named **mappers** and **boardMapper
 	</select>
 </mapper>
 ~~~
-
-# Summary
