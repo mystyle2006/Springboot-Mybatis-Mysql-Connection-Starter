@@ -143,3 +143,21 @@ spring.datasource.password=1209123
 First, you need to install [Mysql](https://dev.mysql.com/downloads/installer/) and create the table like below.
 
 ![Alt text](https://user-images.githubusercontent.com/18185890/33230021-563aa662-d21e-11e7-954b-befce0632dc9.PNG)
+
+## Create SqlSessionFactory bean for the connection
+Go to **src/main/java** and put the below code into our **BoardServicesApplication.java**
+
+~~~
+@Bean
+public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
+	SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
+	sessionFactory.setDataSource(dataSource); //db connection
+
+	//Get mapper resources
+	Resource[] res = new PathMatchingResourcePatternResolver().getResources("classpath:mappers/*Mapper.xml");
+
+	sessionFactory.setMapperLocations(res);
+
+	return sessionFactory.getObject();
+}
+~~~
